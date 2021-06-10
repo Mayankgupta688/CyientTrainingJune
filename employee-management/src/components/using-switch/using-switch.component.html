@@ -1,0 +1,10 @@
+
+<div>
+    <div [ngSwitch]="name">
+        <div *ngSwitchCase="'Mayank'">This is Mayank</div>
+        <div *ngSwitchCase="'Anshul'">This is Anshul...</div>
+        <div *ngSwitchCase="'Ankit'">This is Ankit</div>
+    </div><br/>
+
+    <input type="button" value="Change Name" (click)="updateName()" />
+</div>

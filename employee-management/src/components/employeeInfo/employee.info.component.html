@@ -1,3 +1,11 @@
+<div [ngStyle]="{'color': contentColor, 'backgroundColor': contentBackgroundColor}">
+    This is my Default ....
+</div><br/>
+
+<div [style.color]="contentColor" [style.backgroundColor]="contentBackgroundColor">
+    This is my Default ....
+</div>
+
 <div>
     <ng-container *ngFor="let employee of employeeDetails" style="display: inline-block" >
         <div class="card" style="display: inline-block"
@@ -20,6 +28,10 @@
     </ng-container><hr/>
 
 
-    <input [id]="buttonId" type="button" [value]="buttonText" />
-    <input type="button" value="Add Employee" (click)="addEmployeeToTheList()" />
+    <input [id]="buttonId" [ngClass]="classAssociation" type="button" [value]="buttonText" />
+    <input type="button" [class]="classAssociation" value="Add Employee" (click)="addEmployeeToTheList()" />
+
+    <h1>Employee List</h1>
+    <employee-names></employee-names>
+
 </div>

@@ -5,16 +5,32 @@ import { TrainingDetailsComponent } from "./components/trainingDetails/trainingD
 import { AppStartComponent } from "./container/appStart/app.start.component";
 import { DataBindingComponent } from "./components/dataBinding/data.binding.component";
 import { EmployeeInfoComponent } from "./components/employeeInfo/employee.info.component";
-
+import { UsingSwitchComponent } from './components/using-switch/using-switch.component';
+import { SampleComponentComponent } from './components/sample-component/sample-component.component';
+import { DelayRenderingDirective } from "./directives/delay.rendering.directive";
+import { UsingStructuralDirectiveComponent } from './components/using-structural-directive/using-structural-directive.component';
+import { UsingAttributeDirectiveComponent } from './components/using-attribute-directive/using-attribute-directive.component';
+import { ColorUpdateDirective } from "./directives/color.update.directive";
+import { TwoWayComponent } from './components/two-way/two-way.component';
+import { FormsModule } from"@angular/forms";
+import { EmployeeNamesComponent } from './components/employee-names/employee-names.component'
 @NgModule({
    declarations: [ 
       SalutationComponent, 
       TrainingDetailsComponent, 
       AppStartComponent,
       DataBindingComponent,
-      EmployeeInfoComponent 
+      EmployeeInfoComponent,
+      UsingSwitchComponent,
+      SampleComponentComponent,
+      DelayRenderingDirective,
+      UsingStructuralDirectiveComponent,
+      UsingAttributeDirectiveComponent,
+      ColorUpdateDirective,
+      TwoWayComponent,
+      EmployeeNamesComponent
    ],
-   imports: [ BrowserModule ],
+   imports: [ BrowserModule, FormsModule ],
    bootstrap: [ EmployeeInfoComponent ]
 })
 export class ApplicationModule {}

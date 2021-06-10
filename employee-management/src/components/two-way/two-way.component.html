@@ -1,0 +1,38 @@
+<div style="width: 600px">
+    <div>
+        <label>Enter Name:</label>
+        <input [(ngModel)]="name" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Age:</label>
+        <input [(ngModel)]="age" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Designation:</label>
+        <input [(ngModel)]="designation" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Salary:</label>
+        <input [(ngModel)]="salary" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Bonus:</label>
+        <input type="text" [(ngModel)]="bonus" />
+    </div>
+
+    <input type="button" value="Submit" (click)="showData()" />
+    
+    <div>
+        User Name: {{this.name}} <br/>
+        User Age: {{this.age}} <br/>
+        User Designation: {{this.designation}} <br/>
+        User Salary: {{this.salary}} <br/>
+        User Bonus: {{this.bonus}} <br/>
+    </div>
+
+    <input type="button" value="Update Name" (click)="updateName()" />
+</div>

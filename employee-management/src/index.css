@@ -1,5 +1,7 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 div {
-    color: green !important;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid red;
 }
