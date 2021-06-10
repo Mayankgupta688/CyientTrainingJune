@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/index.css"
             ],
             "scripts": []
           },
@@ -84,6 +85,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/index.css"
             ],
             "scripts": []
           }

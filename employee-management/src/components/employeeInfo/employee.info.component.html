@@ -1,0 +1,24 @@
+<div>
+
+    <div class="card" 
+        (mouseenter)="onMouseEnter(employee)" 
+        (mouseleave)="onMouseLeave(employee)" 
+        class="employee_container" 
+        *ngFor="let employee of employeeDetails" 
+        [style.backgroundColor]="employee.color" style="width: 18rem;">
+
+        <img class="card-img-top" src={{employee.avatar}} alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{employee.name}}</h5>
+            <p class="card-text">
+                    <label>Employee Created On: {{employee.createdAt}}</label>
+                    <label>Employee Id: {{employee.id}}</label>
+            </p>
+            <a href="#" class="btn btn-primary">Delete</a>
+        </div>
+    </div>
+
+
+    
+    <input type="button" value="Add Employee" (click)="addEmployeeToTheList()" />
+</div>

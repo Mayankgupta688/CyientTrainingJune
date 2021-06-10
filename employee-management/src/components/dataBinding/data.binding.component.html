@@ -1,0 +1,15 @@
+<h1>Current Time is {{currentTime}}</h1>
+
+<h1>Hi, {{ userName }}. How are you ?</h1>
+
+<h2>{{getUserDetails()}}</h2>
+
+<h3>Counter Value is {{counter}}</h3>
+
+<input type="button" 
+       value="Click To Update Name" 
+       (click)="updateUserName()" /><br/><br/>
+
+<input type="button" 
+       value="Click To Update Counter" 
+       (click)="updateCounter()" />
