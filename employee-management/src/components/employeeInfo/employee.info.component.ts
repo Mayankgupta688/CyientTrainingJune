@@ -8,11 +8,17 @@ import { IEmployee, IManager, ILead } from "../../interfaces/IEmployee";
 })
 export class EmployeeInfoComponent {
 
+    constructor() {
+        setTimeout(() => {
+            this.changeText()
+        }, 5000)
+    }
+
     employeeDetails: IEmployee[] = [
         {
-           "id":"1",
+           "id":"",
            "createdAt":"2018-12-03T11:37:42.015Z",
-           "name":"Ms. Gaylord Streich",
+           "name":"Meha",
            "avatar":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190503-delish-pineapple-baked-salmon-horizontal-ehg-450-1557771120.jpg?crop=0.669xw:1.00xh;0.173xw,0&resize=640:*",
            color: "grey"
         },
@@ -58,6 +64,9 @@ export class EmployeeInfoComponent {
             color: "grey"
     }];
 
+    buttonText = "Delete All Employee";
+    buttonId = "sample_button"
+
     onMouseEnter(employee: IEmployee) {
         employee.color = "aqua";
     }
@@ -75,5 +84,9 @@ export class EmployeeInfoComponent {
             color: "white"
             
         });
+    }
+
+    changeText() {
+        this.buttonText = "Random Text"
     }
 }

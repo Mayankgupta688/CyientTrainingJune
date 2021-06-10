@@ -1,24 +1,25 @@
 <div>
+    <ng-container *ngFor="let employee of employeeDetails" style="display: inline-block" >
+        <div class="card" style="display: inline-block"
+            (mouseenter)="onMouseEnter(employee)" 
+            (mouseleave)="onMouseLeave(employee)" 
+            class="employee_container" 
+            *ngIf="(employee.id != '' && employee.id > 3)"
+            [style.backgroundColor]="employee.color" style="width: 18rem;">
 
-    <div class="card" 
-        (mouseenter)="onMouseEnter(employee)" 
-        (mouseleave)="onMouseLeave(employee)" 
-        class="employee_container" 
-        *ngFor="let employee of employeeDetails" 
-        [style.backgroundColor]="employee.color" style="width: 18rem;">
-
-        <img class="card-img-top" src={{employee.avatar}} alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{employee.name}}</h5>
-            <p class="card-text">
-                    <label>Employee Created On: {{employee.createdAt}}</label>
-                    <label>Employee Id: {{employee.id}}</label>
-            </p>
-            <a href="#" class="btn btn-primary">Delete</a>
+            <img class="card-img-top" [src]="employee.avatar" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{employee.name}}</h5>
+                <p class="card-text">
+                        <label>Employee Created On: {{employee.createdAt}}</label>
+                        <label>Employee Id: {{employee.id}}</label>
+                </p>
+                <a href="#"  class="btn btn-primary">Delete</a>
+            </div>
         </div>
-    </div>
+    </ng-container><hr/>
 
 
-    
+    <input [id]="buttonId" type="button" [value]="buttonText" />
     <input type="button" value="Add Employee" (click)="addEmployeeToTheList()" />
 </div>
