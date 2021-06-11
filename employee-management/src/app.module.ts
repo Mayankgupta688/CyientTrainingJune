@@ -13,7 +13,10 @@ import { UsingAttributeDirectiveComponent } from './components/using-attribute-d
 import { ColorUpdateDirective } from "./directives/color.update.directive";
 import { TwoWayComponent } from './components/two-way/two-way.component';
 import { FormsModule } from"@angular/forms";
-import { EmployeeNamesComponent } from './components/employee-names/employee-names.component'
+import { EmployeeNamesComponent } from './components/employee-names/employee-names.component';
+import { EventEmitterComponent } from './components/event-emitter/event-emitter.component';
+import { EmployeeListComponent } from './components/employee-list/employee-list.component';
+import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component'
 @NgModule({
    declarations: [ 
       SalutationComponent, 
@@ -28,9 +31,12 @@ import { EmployeeNamesComponent } from './components/employee-names/employee-nam
       UsingAttributeDirectiveComponent,
       ColorUpdateDirective,
       TwoWayComponent,
-      EmployeeNamesComponent
+      EmployeeNamesComponent,
+      EventEmitterComponent,
+      EmployeeListComponent,
+      EmployeeDetailsComponent
    ],
    imports: [ BrowserModule, FormsModule ],
-   bootstrap: [ EmployeeInfoComponent ]
+   bootstrap: [ EmployeeListComponent ]
 })
 export class ApplicationModule {}

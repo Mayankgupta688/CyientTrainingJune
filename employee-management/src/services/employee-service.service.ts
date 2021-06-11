@@ -1,13 +1,14 @@
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { IEmployee } from 'src/interfaces/IEmployee';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmployeeServiceService {
+   dataUpdatedEvent = new EventEmitter<string>()
   employeeDetails: IEmployee[] = [
     {
-       "id":"",
+       "id":"1",
        "createdAt":"2018-12-03T11:37:42.015Z",
        "name":"Meha",
        "avatar":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190503-delish-pineapple-baked-salmon-horizontal-ehg-450-1557771120.jpg?crop=0.669xw:1.00xh;0.173xw,0&resize=640:*",
@@ -54,4 +55,13 @@ export class EmployeeServiceService {
         "avatar":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/20190503-delish-pineapple-baked-salmon-horizontal-ehg-450-1557771120.jpg?crop=0.669xw:1.00xh;0.173xw,0&resize=640:*",
         color: "grey"
   }];
+
+   deleteEmployee(empId) {
+      debugger;
+      this.employeeDetails = this.employeeDetails.filter((employee) => {
+         return employee.id != empId
+      })
+
+      this.dataUpdatedEvent.emit("Data Updated")
+   }
 }

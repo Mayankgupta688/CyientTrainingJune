@@ -12,6 +12,11 @@ export class EmployeeNamesComponent implements OnInit {
 
   constructor(private dataService: EmployeeServiceService) { 
     this.employeeList = dataService.employeeDetails;
+
+    this.dataService.dataUpdatedEvent.subscribe((data) => {
+      alert(data);
+      this.employeeList = this.dataService.employeeDetails;
+    })
   }
 
   ngOnInit(): void {

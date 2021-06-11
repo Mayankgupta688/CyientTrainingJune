@@ -1,0 +1,19 @@
+<h1>This is List of Company Employees...</h1>
+
+<div>
+    <h2 *ngIf="displayName != ''">Employee Name is {{displayName}}</h2><br/>
+
+    <div class="card"   
+        *ngFor="let emp of empList"
+        (mouseenter)="onMouseEnter(emp)" 
+        (mouseleave)="onMouseLeave(emp)" 
+        class="employee_container" 
+        [style.backgroundColor]="emp.color" style="width: 18rem; display: inline-block !important">
+
+        <employee-details (notifyParentEvent)="updateName($event)" [employee]="emp"></employee-details>
+    </div>
+</div>
+
+<div>
+    <employee-names></employee-names>
+</div>

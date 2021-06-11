@@ -5,8 +5,7 @@ import { IEmployee } from "../../interfaces/IEmployee";
 @Component({
     selector: "employee-info",
     templateUrl: "./employee.info.component.html",
-    styleUrls: ["./employee.info.component.css"],
-    providers
+    styleUrls: ["./employee.info.component.css"]
 })
 export class EmployeeInfoComponent {
 
