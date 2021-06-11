@@ -14,7 +14,6 @@ export class EmployeeNamesComponent implements OnInit {
     this.employeeList = dataService.employeeDetails;
 
     this.dataService.dataUpdatedEvent.subscribe((data) => {
-      alert(data);
       this.employeeList = this.dataService.employeeDetails;
     })
   }

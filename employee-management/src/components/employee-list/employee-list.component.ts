@@ -11,11 +11,18 @@ export class EmployeeListComponent{
   empList = [];
   displayName = "";
 
-  constructor(private empService: EmployeeServiceService) { 
-    this.empList = this.empService.employeeDetails;
+  constructor(private empService: EmployeeServiceService) { }
 
+  ngOnInit() {
+    debugger;
+    this.empList = this.empService.employeeDetails;
+    this.subscribeEvent();
+  }
+
+  subscribeEvent() {
+    debugger;
     this.empService.dataUpdatedEvent.subscribe((data) => {
-      alert(data);
+      debugger
       this.empList = this.empService.employeeDetails;
     });
   }
@@ -23,6 +30,10 @@ export class EmployeeListComponent{
   updateName(empName) {
     debugger;
     this.displayName = empName;
+  }
+
+  ngOnDestroy() {
+    this.empService.dataUpdatedEvent.unsubscribe()
   }
 
 }

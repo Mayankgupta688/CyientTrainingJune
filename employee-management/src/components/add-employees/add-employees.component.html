@@ -1,0 +1,28 @@
+<div style="width: 600px">
+    <div>
+        <label>Enter Name:</label>
+        <input [(ngModel)]="name" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Id:</label>
+        <input [(ngModel)]="id" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Avatar:</label>
+        <input [(ngModel)]="avatar" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Color:</label>
+        <input [(ngModel)]="color" type="text" />
+    </div>
+
+    <div>
+        <label>Enter Created At:</label>
+        <input type="text" [(ngModel)]="createdAt" />
+    </div>
+
+    <input type="button" value="Submit" (click)="addDetails()" />
+</div>

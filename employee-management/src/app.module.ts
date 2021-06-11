@@ -1,4 +1,7 @@
 import { NgModule } from "@angular/core";
+import { HttpClientModule } from "@angular/common/http"
+
+
 import { BrowserModule } from "@angular/platform-browser";
 import { SalutationComponent } from "./components/salutation/salutation.component";
 import { TrainingDetailsComponent } from "./components/trainingDetails/trainingDetails.component";
@@ -12,11 +15,13 @@ import { UsingStructuralDirectiveComponent } from './components/using-structural
 import { UsingAttributeDirectiveComponent } from './components/using-attribute-directive/using-attribute-directive.component';
 import { ColorUpdateDirective } from "./directives/color.update.directive";
 import { TwoWayComponent } from './components/two-way/two-way.component';
-import { FormsModule } from"@angular/forms";
+import { FormsModule, ReactiveFormsModule } from"@angular/forms";
 import { EmployeeNamesComponent } from './components/employee-names/employee-names.component';
 import { EventEmitterComponent } from './components/event-emitter/event-emitter.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
-import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component'
+import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
+import { AddEmployeesComponent } from './components/add-employees/add-employees.component';
+import { ReactiveAddEmployeesComponent } from './components/reactive-add-employees/reactive-add-employees.component'
 @NgModule({
    declarations: [ 
       SalutationComponent, 
@@ -34,9 +39,11 @@ import { EmployeeDetailsComponent } from './components/employee-details/employee
       EmployeeNamesComponent,
       EventEmitterComponent,
       EmployeeListComponent,
-      EmployeeDetailsComponent
+      EmployeeDetailsComponent,
+      AddEmployeesComponent,
+      ReactiveAddEmployeesComponent
    ],
-   imports: [ BrowserModule, FormsModule ],
+   imports: [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
    bootstrap: [ EmployeeListComponent ]
 })
 export class ApplicationModule {}

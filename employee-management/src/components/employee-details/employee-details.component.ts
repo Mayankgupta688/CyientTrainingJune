@@ -15,7 +15,7 @@ export class EmployeeDetailsComponent {
 
   deleteEmployee(employee) {
     debugger;
-    this._dataService.deleteEmployee(employee.id);
+    this._dataService.deleteEmployeeFromApi(employee.id);
   }
 
   notifyParent(empName) {
