@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { EmployeeServiceService } from 'src/services/employee-service.service';
+import { EmployeeServiceService } from "../../services/employee-service.service";
 
 @Component({
   selector: 'employee-details',
@@ -13,7 +13,15 @@ export class EmployeeDetailsComponent {
 
   constructor(private _dataService: EmployeeServiceService) {}
 
-  deleteEmployee (employee) {
+  ngOnChanges(changes) {
+    debugger;
+  }
+
+  ngOnInit() {
+
+  }
+
+  deleteEmployee(employee) {
     debugger;
     this._dataService.deleteEmployeeFromApi(employee.id);
   }

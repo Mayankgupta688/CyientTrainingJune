@@ -1,0 +1,15 @@
+<h1 style="background-color: red; padding: 10px; margin: 10px;">This is The Main Component with Heading</h1>
+
+<div style="height: 500px; border: 1px solid black; padding: 10px; margin: 10px; display: inline-block; overflow: scroll;">
+
+
+    <a style="margin-right: 10px;" [routerLink]='[ "/help" ]'>Help</a>
+    <a style="margin-right: 10px;" [routerLink]='[ "/" ]'>Home</a>
+    <a style="margin-right: 10px;" [routerLink]='[ "/about" ]'>About</a>
+    <a style="margin-right: 10px;" [routerLink]='[ "/list" ]'>Employee List</a>
+
+    <router-outlet></router-outlet>
+</div>
+
+<h2 style="background-color: red; padding: 10px; margin: 10px;">This is The Footer</h2>
+

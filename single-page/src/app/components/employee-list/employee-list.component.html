@@ -1,0 +1,11 @@
+<h1>This is List of Company Employees...</h1>
+<h1>{{timeOutput}}</h1>
+<div >
+    <div class="card"   
+        *ngFor="let emp of empList"
+        class="employee_container" 
+        [style.backgroundColor]="emp.color" style="width: 18rem; display: inline-block !important">
+
+        <employee-details  [employee]="emp"></employee-details>
+    </div>
+</div>

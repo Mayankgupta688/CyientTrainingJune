@@ -1,0 +1,10 @@
+<img class="card-img-top" [src]="employee.avatar" alt="Card image cap">
+<div class="card-body">
+    <h5 class="card-title">{{employee.name}}</h5>
+    <p class="card-text">
+            <label>Employee Created On: {{employee.createdAt}}</label>
+            <label>Employee Id: {{employee.id}}</label>
+    </p>
+    <a href="#" class="btn btn-primary" (click)="deleteEmployee(employee)">Delete</a>
+    <a href="#" style="margin-left: 5px;" class="btn btn-primary" (click)="notifyParent(employee.name)">Notify Parent</a>
+</div>

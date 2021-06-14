@@ -1,5 +1,7 @@
 import { NgModule } from "@angular/core";
-import { HttpClientModule } from "@angular/common/http"
+import { HttpClientModule } from "@angular/common/http";
+
+import { FeatureModule } from "./feature.module";
 
 
 import { BrowserModule } from "@angular/platform-browser";
@@ -21,7 +23,10 @@ import { EventEmitterComponent } from './components/event-emitter/event-emitter.
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './components/employee-details/employee-details.component';
 import { AddEmployeesComponent } from './components/add-employees/add-employees.component';
-import { ReactiveAddEmployeesComponent } from './components/reactive-add-employees/reactive-add-employees.component'
+import { ReactiveAddEmployeesComponent } from './components/reactive-add-employees/reactive-add-employees.component';
+
+debugger;
+
 @NgModule({
    declarations: [ 
       SalutationComponent, 
@@ -41,9 +46,10 @@ import { ReactiveAddEmployeesComponent } from './components/reactive-add-employe
       EmployeeListComponent,
       EmployeeDetailsComponent,
       AddEmployeesComponent,
-      ReactiveAddEmployeesComponent
+      ReactiveAddEmployeesComponent,
+      
    ],
-   imports: [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule ],
+   imports: [ BrowserModule, FormsModule, HttpClientModule, ReactiveFormsModule, FeatureModule ],
    bootstrap: [ EmployeeListComponent ]
 })
 export class ApplicationModule {}
